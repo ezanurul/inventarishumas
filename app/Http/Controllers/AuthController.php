@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class AuthController extends Controller
@@ -19,10 +18,13 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        // Cari user berdasarkan email dan password (tanpa hash)
+        $user = User::where('email', $request->email)
+                    ->where('password', $request->password)
+                    ->first();
 
-        if ($user && Hash::check($request->password, $user->password)) {
-            Auth::login($user);
+        if ($user) {
+            Auth::login($user); // Login langsung
             return redirect()->intended('/home');
         }
 
