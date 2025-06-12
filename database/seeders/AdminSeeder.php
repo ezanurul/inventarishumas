@@ -12,7 +12,7 @@ class SuperAdminSeeder extends Seeder
     {
         User::create([
             'name' => 'Super Admin',
-            'email' => 'admininven@utdi.com',
+            'email' => 'admininven@admin.com',
             'password' => 'admin123',
             'role' => 'admin',
         ]);
