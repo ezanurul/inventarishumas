@@ -17,3 +17,4 @@ class BarangSeeder extends Seeder
         }
     }
 }
+
