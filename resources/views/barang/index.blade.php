@@ -8,7 +8,7 @@
         @csrf
         <div class="mb-3">
             <label for="nama_barang" class="form-label">Nama Barang</label>
-            <input type="text" class="form-control" name="nama_barang" required>
+            <input type="text" class="form-control" name="nama_barang" autocomplete="off" required>
         </div>
         <div class="mb-3">
             <label for="jumlah" class="form-label">Jumlah</label>
