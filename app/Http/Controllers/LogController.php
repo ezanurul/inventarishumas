@@ -8,7 +8,7 @@ use App\Models\LogAktivitas;
 class LogController extends Controller
 {
     public function index() {
-        $log = LogAktivitas::with('barang')->orderBy('tanggal', 'desc')->get();
+        $log = LogAktivitas::with('barang')->orderBy('tanggal')->get();
         return view('log.index', compact('log'));
     }
 }
