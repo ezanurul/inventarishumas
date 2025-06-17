@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Barang;
+
 
 class BarangSeeder extends Seeder
 {
@@ -13,7 +15,7 @@ class BarangSeeder extends Seeder
             'Paper bag','Plakat','Tas Premium','Tas Fecil','Mug','Pouch'
         ];
         foreach ($list as $nama) {
-            Barang::create(['nama_barang' => $nama, 'deskripsi' => '-', 'jumlah' => 0]);
+            Barang::create(['nama_barang' => $nama, 'jumlah' => 0]);
         }
     }
 }
