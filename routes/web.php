@@ -35,5 +35,5 @@ use App\Http\Controllers\BarangKeluarController;
 
     // BarangController untuk mengelola stok barang
 use App\Http\Controllers\BarangController;
-    Route::get('/barang', [BarangController::class, 'index']);
-    Route::post('/barang', [BarangController::class, 'store']);
+    Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
+    Route::post('/barang', [BarangController::class, 'store'])->name('barang.store');
